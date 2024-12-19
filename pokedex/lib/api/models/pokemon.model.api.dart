@@ -8,11 +8,11 @@ part 'pokemon.model.api.g.dart';
 @freezed
 class PokemonSnippetModelApi with _$PokemonSnippetModelApi{
   const factory PokemonSnippetModelApi({
-    required int id,
+    required String url,
     required String name, 
-    required double height,
+    //required double height,
     @Default([]) List<PokemonImageModelApi> image,
-    required double weight,
+    //required double weight,
   }) = _PokemonSnippetModelApi;
 factory PokemonSnippetModelApi.fromJson(Map<String, dynamic> json)
 => _$PokemonSnippetModelApiFromJson(json);

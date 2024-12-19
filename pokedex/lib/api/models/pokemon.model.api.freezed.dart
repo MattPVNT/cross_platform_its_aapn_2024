@@ -21,11 +21,10 @@ PokemonSnippetModelApi _$PokemonSnippetModelApiFromJson(
 
 /// @nodoc
 mixin _$PokemonSnippetModelApi {
-  int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  double get height => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
+  String get name =>
+      throw _privateConstructorUsedError; //required double height,
   List<PokemonImageModelApi> get image => throw _privateConstructorUsedError;
-  double get weight => throw _privateConstructorUsedError;
 
   /// Serializes this PokemonSnippetModelApi to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,12 +42,7 @@ abstract class $PokemonSnippetModelApiCopyWith<$Res> {
           $Res Function(PokemonSnippetModelApi) then) =
       _$PokemonSnippetModelApiCopyWithImpl<$Res, PokemonSnippetModelApi>;
   @useResult
-  $Res call(
-      {int id,
-      String name,
-      double height,
-      List<PokemonImageModelApi> image,
-      double weight});
+  $Res call({String url, String name, List<PokemonImageModelApi> image});
 }
 
 /// @nodoc
@@ -67,33 +61,23 @@ class _$PokemonSnippetModelApiCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? url = null,
     Object? name = null,
-    Object? height = null,
     Object? image = null,
-    Object? weight = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      height: null == height
-          ? _value.height
-          : height // ignore: cast_nullable_to_non_nullable
-              as double,
       image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as List<PokemonImageModelApi>,
-      weight: null == weight
-          ? _value.weight
-          : weight // ignore: cast_nullable_to_non_nullable
-              as double,
     ) as $Val);
   }
 }
@@ -107,12 +91,7 @@ abstract class _$$PokemonSnippetModelApiImplCopyWith<$Res>
       __$$PokemonSnippetModelApiImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int id,
-      String name,
-      double height,
-      List<PokemonImageModelApi> image,
-      double weight});
+  $Res call({String url, String name, List<PokemonImageModelApi> image});
 }
 
 /// @nodoc
@@ -130,33 +109,23 @@ class __$$PokemonSnippetModelApiImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? url = null,
     Object? name = null,
-    Object? height = null,
     Object? image = null,
-    Object? weight = null,
   }) {
     return _then(_$PokemonSnippetModelApiImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
+      url: null == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      height: null == height
-          ? _value.height
-          : height // ignore: cast_nullable_to_non_nullable
-              as double,
       image: null == image
           ? _value._image
           : image // ignore: cast_nullable_to_non_nullable
               as List<PokemonImageModelApi>,
-      weight: null == weight
-          ? _value.weight
-          : weight // ignore: cast_nullable_to_non_nullable
-              as double,
     ));
   }
 }
@@ -167,23 +136,21 @@ class _$PokemonSnippetModelApiImpl
     with DiagnosticableTreeMixin
     implements _PokemonSnippetModelApi {
   const _$PokemonSnippetModelApiImpl(
-      {required this.id,
+      {required this.url,
       required this.name,
-      required this.height,
-      final List<PokemonImageModelApi> image = const [],
-      required this.weight})
+      final List<PokemonImageModelApi> image = const []})
       : _image = image;
 
   factory _$PokemonSnippetModelApiImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokemonSnippetModelApiImplFromJson(json);
 
   @override
-  final int id;
+  final String url;
   @override
   final String name;
-  @override
-  final double height;
+//required double height,
   final List<PokemonImageModelApi> _image;
+//required double height,
   @override
   @JsonKey()
   List<PokemonImageModelApi> get image {
@@ -193,11 +160,8 @@ class _$PokemonSnippetModelApiImpl
   }
 
   @override
-  final double weight;
-
-  @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PokemonSnippetModelApi(id: $id, name: $name, height: $height, image: $image, weight: $weight)';
+    return 'PokemonSnippetModelApi(url: $url, name: $name, image: $image)';
   }
 
   @override
@@ -205,11 +169,9 @@ class _$PokemonSnippetModelApiImpl
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'PokemonSnippetModelApi'))
-      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('url', url))
       ..add(DiagnosticsProperty('name', name))
-      ..add(DiagnosticsProperty('height', height))
-      ..add(DiagnosticsProperty('image', image))
-      ..add(DiagnosticsProperty('weight', weight));
+      ..add(DiagnosticsProperty('image', image));
   }
 
   @override
@@ -217,17 +179,15 @@ class _$PokemonSnippetModelApiImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PokemonSnippetModelApiImpl &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.url, url) || other.url == url) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.height, height) || other.height == height) &&
-            const DeepCollectionEquality().equals(other._image, _image) &&
-            (identical(other.weight, weight) || other.weight == weight));
+            const DeepCollectionEquality().equals(other._image, _image));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, height,
-      const DeepCollectionEquality().hash(_image), weight);
+  int get hashCode => Object.hash(
+      runtimeType, url, name, const DeepCollectionEquality().hash(_image));
 
   /// Create a copy of PokemonSnippetModelApi
   /// with the given fields replaced by the non-null parameter values.
@@ -248,25 +208,19 @@ class _$PokemonSnippetModelApiImpl
 
 abstract class _PokemonSnippetModelApi implements PokemonSnippetModelApi {
   const factory _PokemonSnippetModelApi(
-      {required final int id,
+      {required final String url,
       required final String name,
-      required final double height,
-      final List<PokemonImageModelApi> image,
-      required final double weight}) = _$PokemonSnippetModelApiImpl;
+      final List<PokemonImageModelApi> image}) = _$PokemonSnippetModelApiImpl;
 
   factory _PokemonSnippetModelApi.fromJson(Map<String, dynamic> json) =
       _$PokemonSnippetModelApiImpl.fromJson;
 
   @override
-  int get id;
+  String get url;
   @override
-  String get name;
-  @override
-  double get height;
+  String get name; //required double height,
   @override
   List<PokemonImageModelApi> get image;
-  @override
-  double get weight;
 
   /// Create a copy of PokemonSnippetModelApi
   /// with the given fields replaced by the non-null parameter values.
