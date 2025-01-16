@@ -20,7 +20,7 @@ PokemonImageModelApi _$PokemonImageModelApiFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PokemonImageModelApi {
-  String get imageUrl => throw _privateConstructorUsedError;
+  String get front_default => throw _privateConstructorUsedError;
 
   /// Serializes this PokemonImageModelApi to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $PokemonImageModelApiCopyWith<$Res> {
           $Res Function(PokemonImageModelApi) then) =
       _$PokemonImageModelApiCopyWithImpl<$Res, PokemonImageModelApi>;
   @useResult
-  $Res call({String imageUrl});
+  $Res call({String front_default});
 }
 
 /// @nodoc
@@ -57,12 +57,12 @@ class _$PokemonImageModelApiCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? imageUrl = null,
+    Object? front_default = null,
   }) {
     return _then(_value.copyWith(
-      imageUrl: null == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
+      front_default: null == front_default
+          ? _value.front_default
+          : front_default // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -76,7 +76,7 @@ abstract class _$$PokemonImageModelApiImplCopyWith<$Res>
       __$$PokemonImageModelApiImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String imageUrl});
+  $Res call({String front_default});
 }
 
 /// @nodoc
@@ -92,12 +92,12 @@ class __$$PokemonImageModelApiImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? imageUrl = null,
+    Object? front_default = null,
   }) {
     return _then(_$PokemonImageModelApiImpl(
-      imageUrl: null == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
+      front_default: null == front_default
+          ? _value.front_default
+          : front_default // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -108,17 +108,17 @@ class __$$PokemonImageModelApiImplCopyWithImpl<$Res>
 class _$PokemonImageModelApiImpl
     with DiagnosticableTreeMixin
     implements _PokemonImageModelApi {
-  const _$PokemonImageModelApiImpl({required this.imageUrl});
+  const _$PokemonImageModelApiImpl({required this.front_default});
 
   factory _$PokemonImageModelApiImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokemonImageModelApiImplFromJson(json);
 
   @override
-  final String imageUrl;
+  final String front_default;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'PokemonImageModelApi(imageUrl: $imageUrl)';
+    return 'PokemonImageModelApi(front_default: $front_default)';
   }
 
   @override
@@ -126,7 +126,7 @@ class _$PokemonImageModelApiImpl
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'PokemonImageModelApi'))
-      ..add(DiagnosticsProperty('imageUrl', imageUrl));
+      ..add(DiagnosticsProperty('front_default', front_default));
   }
 
   @override
@@ -134,13 +134,13 @@ class _$PokemonImageModelApiImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PokemonImageModelApiImpl &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl));
+            (identical(other.front_default, front_default) ||
+                other.front_default == front_default));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, imageUrl);
+  int get hashCode => Object.hash(runtimeType, front_default);
 
   /// Create a copy of PokemonImageModelApi
   /// with the given fields replaced by the non-null parameter values.
@@ -161,14 +161,14 @@ class _$PokemonImageModelApiImpl
 }
 
 abstract class _PokemonImageModelApi implements PokemonImageModelApi {
-  const factory _PokemonImageModelApi({required final String imageUrl}) =
+  const factory _PokemonImageModelApi({required final String front_default}) =
       _$PokemonImageModelApiImpl;
 
   factory _PokemonImageModelApi.fromJson(Map<String, dynamic> json) =
       _$PokemonImageModelApiImpl.fromJson;
 
   @override
-  String get imageUrl;
+  String get front_default;
 
   /// Create a copy of PokemonImageModelApi
   /// with the given fields replaced by the non-null parameter values.

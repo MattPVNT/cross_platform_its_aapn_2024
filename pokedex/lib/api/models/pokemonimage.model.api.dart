@@ -7,7 +7,7 @@ part 'pokemonimage.model.api.g.dart';
 @freezed
 class PokemonImageModelApi with _$PokemonImageModelApi{
   const factory PokemonImageModelApi({
-    required String imageUrl,
+    required String front_default,
   }) = _PokemonImageModelApi;
 factory PokemonImageModelApi.fromJson(Map<String, dynamic> json)
 => _$PokemonImageModelApiFromJson(json);

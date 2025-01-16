@@ -11,11 +11,6 @@ _$PokemonSnippetModelApiImpl _$$PokemonSnippetModelApiImplFromJson(
     _$PokemonSnippetModelApiImpl(
       url: json['url'] as String,
       name: json['name'] as String,
-      image: (json['image'] as List<dynamic>?)
-              ?.map((e) =>
-                  PokemonImageModelApi.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
     );
 
 Map<String, dynamic> _$$PokemonSnippetModelApiImplToJson(
@@ -23,5 +18,4 @@ Map<String, dynamic> _$$PokemonSnippetModelApiImplToJson(
     <String, dynamic>{
       'url': instance.url,
       'name': instance.name,
-      'image': instance.image,
     };
