@@ -9,11 +9,11 @@ part of 'pokemonimage.model.api.dart';
 _$PokemonImageModelApiImpl _$$PokemonImageModelApiImplFromJson(
         Map<String, dynamic> json) =>
     _$PokemonImageModelApiImpl(
-      imageUrl: json['imageUrl'] as String,
+      front_default: json['front_default'] as String,
     );
 
 Map<String, dynamic> _$$PokemonImageModelApiImplToJson(
         _$PokemonImageModelApiImpl instance) =>
     <String, dynamic>{
-      'imageUrl': instance.imageUrl,
+      'front_default': instance.front_default,
     };

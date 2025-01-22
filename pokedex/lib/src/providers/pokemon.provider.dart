@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:pokedex/api/pokemon.api.dart';
 import 'package:pokedex/src/models/pokemon.model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -5,24 +7,21 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'pokemon.provider.g.dart';
 
 @riverpod
-FutureOr<List<PokemonDetails>> pokemonDetail(PokemonDetailRef ref) async{
+FutureOr<List<PokemonModel>> pokemonModel(PokemonModelRef ref) async{
+  final page = Random().nextInt(10) + 1;
   final api = ref.watch(pokemonApiProvider);
-  final  result= await api.getResults();
+  final  result= await api.getResults(page: page);
   return [
     for(final esterno in result.results)
-      PokemonDetails(
-        url: esterno.url,
+      PokemonModel(
+        id:idTrasformation(esterno.url),
         name: esterno.name,
-        //height: esterno.height,
-        image: esterno.image,
-        //weight: esterno.weight,
       )
   ];
 }
   
 
   int idTrasformation(String url) {
-    final url = "https://pokeapi.co/api/v2/pokemon/123/";
     final split = url.split('/');
     final [..., id, _] = split;
     print(id);  // "1", stringa
