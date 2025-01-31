@@ -15,6 +15,16 @@ class SavedList extends ConsumerWidget {
       body: ListView(
         children: [
           for( final n in saved)
+          ListTile(
+            leading: Image.network(n.flags.png),
+            title: Text(n.name.common),
+            trailing: IconButton(
+                            onPressed: () {
+                                ref.read(savedNationsProviderProvider.notifier).removenation(n); 
+                            }, 
+                            icon: const Icon(Icons.remove)
+                            ),
+          )
         ],
       ),
     );
